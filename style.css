@@ -593,10 +593,10 @@ header {
 .card h1{
     position: absolute;
     margin: 0;
-    top: 10px;
+    top: 24px;
     left: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 60px;
+    font-size: 37px;
     z-index: 1;
     background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff);
     background-size: 200%;
@@ -609,8 +609,9 @@ header {
 
 .card p{
     position: absolute;
-    top: 80px;
+    top: 68px;
     left: 20px;
+    font-size: 15px;
     z-index: 1;
     max-width: 250px;
     color: lightgray;
@@ -620,7 +621,7 @@ header {
 .card button{
     position: absolute;
     bottom: 5%;
-    left: 5%;
+    left: 2%;
     padding: 10px 25px;
     border: 1px solid gray;
     background-color: #0f1217;
@@ -653,4 +654,62 @@ header {
 .card:nth-child(2){
     grid-row: span 2;
     height: 83vh;
+}
+
+.card:nth-child(2) h1{
+    font-size: 35px;
+    top: 20px;
+    left: 20px;
+}
+
+.card:nth-child(2) p{
+    top: 105px;
+    left: 20px;
+    max-width: 330px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card:nth-child(3) h1{
+    font-size: 30px;
+    top: 20px;
+    left: 20px;
+}
+
+.card:nth-child(3) p{
+    top: 95px;
+    left: 20px;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card:nth-child(4) h1{
+    font-size: 30px;
+    top: 20px;
+    left: 20px;
+}
+
+.card:nth-child(4) p{
+    top: 95px;
+    left: 20px;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 1;
+}
+
+.card:nth-child(3)::before{
+    background: rgba(0,0,0,0.45);
+}
+
+.card:nth-child(2)::before{
+    background: rgba(0,0,0,0.35);
 }
