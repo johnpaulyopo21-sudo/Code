@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaming Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-
-<div class="container">
-
-    <header>
-
-        <div class="head-left">
-            <img src="img/icon.png" alt="logo">
-            <button>Download</button>
-        </div>
+    <div class="container">
+        <header>
+            <div class="head-left">
+                <img src="img/icon.png" alt="logo">
+                <button>Download</button>
+            </div>
 
         <div class="head-right">
             <a href="#">EXPLORE</a>
@@ -28,8 +29,7 @@
 
     </header>
 
-    <section class="hero-section">
-
+    <section class="hero-section autoBlur">
         <div class="hero-vid">
             <video class="hero-video" autoplay muted loop playsinline>
                 <source src="videos/hero1.mp4" type="video/mp4">
@@ -50,9 +50,11 @@
 
     <section class="about-section">
         <p>Welcome to Genshin Impact</p>
+        <div class="autoBlur">
         <h1>DISCOVER THE WORLD'S LARGEST SHARED ADVENTURE</h1>
-
-        <div class="image-box">
+    </div>
+    <img class="stones-img" src="img/stones.png" alt="stones-image">
+        <div class="image-box autoTakeFull">
             <img src="img/about.webp.png" alt="about-img">
         </div>
         <h4>Explore the world of Teyvat in an epic fantasy adventure RPG</h4>
@@ -60,13 +62,13 @@
     </section>
 
     <section class="info-section">
-        <h3>Into the Metagame Layer</h3>
-        <p>A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding aventure.</p>
+        <h3>Into the Realm of Adventure</h3>
+        <p>A fantasy-driven experience, turning every journey across Teyvat into an unforgettable story filled with discovery, powerful battles, and legendary companions.</p>
 
 
     <div class="info-cards">
 
-            <div class="card">
+            <div class="card autoDisplay">
                 <h1>RADIANT</h1>
                 <p>An anime and gaming-inspired NFT collection - the IP primed for expansion.</p>
 
@@ -74,36 +76,60 @@
                 <button>SEE MORE</button>
             </div>
 
-            <div class="card">
+            <div class="card autoDisplay">
                 <h1>BEYOND<br>TEYVAT</h1>
                 <p>Explore a vast open world<br>filled with wonder, secrets,<br>and endless adventures.</p>
                 <video src="videos/feature2.mp4" autoplay loop muted playsinline></video>
                 <button>SEE MORE</button>
             </div>
 
-            <div class="card">
+            <div class="card autoDisplay">
                 <h1>GENSHIN<br>LORE</h1>
                 <p>Dive deep into rich lore of Teyvat, <br>from ancient civilization to the story<br> of the gods.</p>
                 <video src="videos/feature3.mp4" autoplay loop muted playsinline></video>
                 <button>SEE MORE</button>
             </div>
 
-            <div class="card">
+            <div class="card autoDisplay">
                 <h1>TRAVEL<br>TOGETHER</h1>
                 <p>Join your companions on an epic<br>adventure and create memories<br>that will last forever.</p>
                 <video src="videos/feature4.mp4" autoplay loop muted playsinline></video>
                 <button>SEE MORE</button>
             </div>
 
-            <div class="card">
+            <div class="card autoDisplay">
                 <video src="videos/feature5.mp4" autoplay loop muted playsinline></video>
             </div>
 
-            <div class="card">
+            <div class="card autoDisplay">
                 <h1>MORE COMING SOON</h1>
             </div>
         </div>
     </section>
+
+    <section class="contact-section">
+        <p>Enter Teyvat</p>
+        <div class="autoBlur">
+            <h1>LET'S EXPLORE THE WORLD OF GENSHIN IMPACT TOGETHER</h1>
+        </div>
+        
+        <button>CONTACT US</button>
+        <img class="img1" src="img/swordman.webp" alt="contact-img">
+        <img class="img2" src="img/contact1.png" alt="contact-img">
+        <img class="img3" src="img/contact2.png" alt="contact-img">
+    </section>
+
+    <section class="footer">
+
+    <p>© Teyvat 2025. All rights reserved</p>
+    <ul>
+        <li><a href="#"><i class='bx bxl-youtube'></i></a></li>
+        <li><a href="#"><i class='bx bxl-tiktok'></i></a></li>
+        <li><a href="#"><i class='bx bxl-github'></i></a></li>
+        <li><a href="#"><i class='bx bxl-facebook'></i></a></li>
+    </ul>
+    <p>Privacy Policy</p>
+</section>
 </div>
 
 <script src="app.js"></script>
