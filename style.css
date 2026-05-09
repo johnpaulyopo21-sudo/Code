@@ -13,7 +13,6 @@ body {
     position: relative;
 }
 
-/* NAVBAR */
 header {
     position: absolute;
     top: 0;
@@ -225,7 +224,6 @@ header {
     line-height: 25px;
 }
 
-/* INFO SECTION */
 .info-section {
     display: flex;
     flex-direction: column;
@@ -253,7 +251,6 @@ header {
     margin-top: 30px;
 }
 
-/* CARDS */
 .card {
     position: relative;
     height: 40vh;
@@ -323,31 +320,44 @@ header {
     top: -3.2px;
 }
 
-.card button {
-    display: inline-flex;
-    align-items: center;
-    position: absolute;
-    bottom: 5%;
+.card button{
+   position: absolute;
+   bottom: 5%;
+   left: 2%;
+   padding: 10px 25px;
+   border: 1px solid gray;
+   background-color: #0f1217;
+   color: gray;
+   border-radius: 20px;
+   box-shadow: 0 0 5px lightgray;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.card:nth-child(1) button{
+    bottom: 15px;
     left: 20px;
-    z-index: 2;
-    padding: 8px 24px;
-    font-size: 13px;
-    font-weight: 700;
-    border: 1px solid rgba(255,255,255,0.25);
-    background: rgba(20,20,20,0.75);
-    color: #9b9b9b;
-    border-radius: 999px;
-    cursor: pointer;
-    backdrop-filter: blur(4px);
-    transition: 0.3s;
 }
 
-.card button:hover {
-    background: rgba(40,40,40,0.9);
-    color: white;
-    border-color: rgba(255,255,255,0.5);
+.card:nth-child(2) button{
+    bottom: 15px;
+    left: 20px;
 }
 
+.card:nth-child(3) button{
+    bottom: 15px;
+    left: 20px;
+}
+
+.card:nth-child(4) button{
+    bottom: 15px;
+    left: 20px;
+}
+
+.card button:hover{
+    box-shadow: 0 0 15px lightgray;
+    opacity: 0.7;
+}
 
 .card:nth-child(1) {
     grid-column: span 2;
@@ -386,4 +396,269 @@ header {
 
 .card:nth-child(3)::before {
     background: rgba(0,0,0,0.45);
+}
+
+.contact-section{
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.contact-section .img1{
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    height: 400px;
+    clip-path: polygon(32% 0, 94% 0, 74% 100%, 0% 100%);
+}
+
+.contact-section .img2{
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    height: 250px;
+    clip-path: polygon(27% 7%, 70% 2%, 100% 50%, 66% 94%, 21% 87%, 2% 49%);
+}
+
+.contact-section .img3{
+    position: absolute;
+    left: 5%;
+    bottom: 6%;
+    height: 250px;
+    width: 250px;
+    clip-path: polygon(46% 4%, 100% 38%, 82% 100%, 29% 91%, 0% 38%);
+}
+
+.contact-section p{
+    margin-top: 100px;
+}
+
+.contact-section h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    max-width: 550px;
+    text-align: center;
+    background: linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.contact-section button{
+   padding: 10px 25px;
+   border: 1px solid gray;
+   background-color: #0f1217;
+   color: gray;
+   border-radius: 20px;
+   box-shadow: 0 0 5px lightgray;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.contact-section button:hover{
+    box-shadow: 0 0 15px lightgray;
+    opacity: 0.7;
+}
+
+.footer{
+    width: 100%;
+    height: 100px;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    background-color: rgba(211, 211, 211, 0.21);
+    backdrop-filter: blur(10px);
+}
+
+.footer p:first-child{
+    justify-self: start;
+}
+
+.footer p:last-child{
+    justify-self: end;
+}
+
+.footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+
+    gap: 20px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer li{
+    display: flex;
+}
+
+.footer a{
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: white;
+
+    border-radius: 50%;
+    border: 1px solid rgb(0, 130, 211);
+
+    transition: 0.3s;
+}
+
+.footer a:hover{
+    box-shadow: 0 0 15px rgb(0, 130, 211);
+}
+
+.footer i{
+    font-size: 20px;
+}
+
+.footer p{
+    margin: 0;
+}
+
+.stones-img{
+    position: absolute;
+    margin-top: 22%;
+    width: 500px;
+}
+
+/* BLUR EFFECT ANIMATION */
+
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    40%,60%{
+        filter: blur(0);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+/* TAKE FULL SCREEN ANIMATION */
+.autoTakeFull{
+    animation: autoTakeFullAnimation both;
+    animation-timeline: view(70% 65%);
+}
+
+@keyframes autoTakeFullAnimation{
+    to{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 100px;
+    }
+}
+
+/* AUTO DISPLAY ANIMATION */
+.autoDisplay{
+    animation: autoDisplayAnimation both;
+    animation-timeline: view(70% 5%);
+}
+
+@keyframes autoDisplayAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    } to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media screen and (max-width: 650px){
+    header{
+        padding: 0 10px;
+    }
+    .head-left button{
+        display: none;
+    }
+    .head-right a{
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .hero-info{
+        left: 5%;
+    }
+    .hero-section h1{
+        font-size: 90px;
+    }
+    .next-btn{
+        left: 25%;
+        top: 40%;
+    }
+    .about-section{
+        margin: 0;
+    }
+    .about-section h1{
+        font-size: 50px;
+    }
+    .image-box{
+        width: 300px;
+        height: 500px;
+    }
+    .about-section h4, .about-section h5{
+        max-width: 350px;
+        text-align: center;
+    }
+    .contact-section .img1{
+        width: 150px;
+        height: 200px;
+        right: 0;
+        top: 20px;
+    }
+    .contact-section .img2{
+        top: 30px;
+        left: -40px;
+        width: 180px;
+        height: 180px;
+    }
+    .contact-section .img3{
+        left: -40px;
+        bottom: 0;
+        width: 150px;
+        height: 180;
+    }
+    .contact-section h1{
+        font-size: 60px;
+        max-width: 300px;
+    }
+    .footer p{
+        display: none;
+    }
+    .footer ul{
+        margin-left: 70px;
+    }
+    .stones-img{
+        margin-top: 80%;
+        width: 400px;
+    }
 }
